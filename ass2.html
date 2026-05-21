@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Checker</title>
+
+</head>
+
+<body class="body">
+
+    <div class="big">
+
+        <div class="card ">
+
+            <h1 class="text">
+                Student Result Checker
+            </h1>
+
+            <div class="name">
+                <label class="form-label fw-bold">Student Name</label>
+
+                <input 
+                    type="text" 
+                    placeholder="Enter your name"
+                    id="name"
+                    class="form-control form-control-lg"
+                >
+            </div>
+
+            <div class="ins">
+
+                <div class="first">
+                    <input 
+                        type="number"
+                        placeholder="Maths Result"
+                        id="maths"
+                        class="maths"
+                    >
+                </div>
+
+                <div class="second">
+                    <input 
+                        type="number"
+                        placeholder="English Result"
+                        id="eng"
+                        class="eng"
+                    >
+                </div>
+
+                <div class="third">
+                    <input 
+                        type="number"
+                        placeholder="Biology Result"
+                        id="bio"
+                        class="bio"
+                    >
+                </div>
+
+                <div class="forth">
+                    <input 
+                        type="number"
+                        placeholder="Chemistry Result"
+                        id="chem"
+                        class="chem"
+                    >
+                </div>
+
+            </div>
+
+            <div class="btn-p">
+                <button 
+                    onclick="aveScore()"
+                    class="btn "
+                >
+                    Submit Result
+                </button>
+            </div>
+
+            <div class="table">
+
+                <table class="table ">
+
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Total</th>
+                            <th>Average</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="result">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="ass2.js"></script>
+
+</body>
+</html>
