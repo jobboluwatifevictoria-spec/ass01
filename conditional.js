@@ -59,5 +59,6 @@ switch (weather) {
 
 let isGoing = true
 
+
 isGoing? console.log("is going o"): console.log("it's not going");
 ;

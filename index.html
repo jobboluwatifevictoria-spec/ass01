@@ -1,14 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div style="background-color: blue;">
-  <h1>Hello</h1>
-    </div>
     <script src="conditional.js"></script>
-</body>
+  </head>
+  <body>
+    <div style="background-color: blue">
+      <h1>Hello</h1>
+    </div>
+    <button onclick="greet()">Greet</button>
+    <div id="myDiv">Hello, this is my div</div>
+    <div id="secondDiv"></div>
+
+    <input type="text" name="" id="myInput" />
+    <button onclick="show()">Show Value</button>
+
+    <p id="output"></p>
+
+    <script>
+      function greet() {
+        console.log("hello,everyone");
+      }
+      let div = document.getElementById("myDiv");
+      let secondDiv = document.getElementById("secondDiv");
+
+      div.innerText = "Hello,this is js text";
+      secondDiv.innerHTML = "<h1>Hello, this is innerHTML</h1>";
+
+      console.log(div);
+
+      let output = document.getElementById("output")
+
+      function show() {
+        let myInput = document.getElementById("myInput").value;
+        console.log(myInput);
+
+if (myInput == "") {
+    alert("pls fill in the input")
+} else{
+    output.innerText = myInput
+}
+
+        output.innerText = myInput
+      }
+    </script>
+  </body>
 </html>
