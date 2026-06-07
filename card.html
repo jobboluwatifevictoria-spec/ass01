@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQI ID Card</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+    <div class="card-container">
+
+        <button class="arrow left-arrow" onclick="previousStudent()">
+            &#10094;
+        </button>
+
+        <div class="id-card">
+
+            <img
+                src="./IMG/sqi.png"
+                alt="logo"
+                class="logo"
+            >
+
+            <h3>SQI COLLEGE OF ICT</h3>
+
+            <div class="location">
+                A B E O K U T A
+            </div>
+
+            <div class="student-badge">
+                STUDENT
+            </div>
+
+            <div class="photo-ring">
+                <img src="./IMG/tes.jpeg" alt="" id="studentImage">
+            </div>
+
+            <h3 class="student-name" id="studentName">
+                Oluwawole Testimony .T
+            </h3>
+
+            <div class="department" id="course">
+                Software Engineering
+            </div>
+
+            <div class="id-section">
+                <span>Student ID</span>
+                <h3 id="studentId">| 253091</h3>
+            </div>
+
+            <div class="website">
+                e d u . s q i . n g
+            </div>
+
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="arrow right-arrow" onclick="nextStudent()">
+            &#10095;
+        </button>
+
+    </div>
+
+    <script src="card.js"></script>
+
+</body>
+</html>
