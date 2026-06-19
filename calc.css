@@ -1,0 +1,95 @@
+/* ============================
+   Basic page setup
+============================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ============================
+   Calculator card
+============================ */
+.calculator {
+  background-color: #df18ad;
+  border: 1px solid #c9ccd1;
+  border-radius: 6px;
+  padding: 20px;
+  width: 450px;
+}
+
+/* ============================
+   Top input row
+============================ */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #b9bdc4;
+  border-radius: 4px;
+  background-color: #b373aa;
+  font-size: 14px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #c9ccd1;
+  margin-bottom: 18px;
+}
+
+/* ============================
+   Buttons + result section
+============================ */
+.action-row {
+  display: flex;
+  gap: 14px;
+}
+
+/* Column of operator buttons */
+.button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-column button {
+  width: 40px;
+  height: 40px;
+  background-color: #ce5fb6;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-column button:hover {
+  background-color: #4a6580;
+}
+
+/* Result display box */
+.result-box {
+  flex: 1;
+  background-color: #906c97;
+  border: 1px solid #b9bdc4;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #111010;
+  min-height: 150px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="calc.css" />
+</head>
+<body>
+
+  <div class="calculator">
+
+    <!-- Input row -->
+    <div class="input-row">
+      <input type="number" id="firstNum" placeholder="First digit" />
+      <input type="number" id="secondNum" placeholder="Second digit" />
+    </div>
+
+    <hr />
+
+    <!-- Buttons + Result -->
+    <div class="action-row">
+
+      <!-- Operator buttons -->
+      <div class="button-column">
+        <button id="addBtn">+</button>
+        <button id="subBtn">-</button>
+        <button id="mulBtn">x</button>
+        <button id="divBtn">/</button>
+      </div>
+
+      <!-- Result display -->
+      <div class="result-box" id="result">0</div>
+
+    </div>
+  </div>
+
+  <script src="calc.js"></script>
+</body>
+</html>
