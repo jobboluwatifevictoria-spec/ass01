@@ -1,0 +1,234 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600");
+    background-size:cover;
+    background-position:center;
+}
+
+.container{
+
+    width:420px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    animation:fade .6s ease;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.logo{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:10px;
+}
+
+h2{
+
+    text-align:center;
+
+    color:#b22222;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-bottom:30px;
+
+    font-size:15px;
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:18px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:#b22222;
+
+    box-shadow:0 0 10px rgba(178,34,34,.25);
+}
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#b22222;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#8b0000;
+
+    transform:translateY(-2px);
+}
+
+p{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#555;
+}
+
+a{
+
+    color:#b22222;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+a:hover{
+
+    text-decoration:underline;
+}
+
+/* Dashboard */
+
+.dashboard{
+
+    width:700px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    text-align:center;
+}
+
+.dashboard h1{
+
+    color:#b22222;
+
+    margin-bottom:20px;
+}
+
+#welcome{
+
+    font-size:24px;
+
+    margin:25px 0;
+
+    color:#333;
+}
+
+.logout{
+
+    width:200px;
+
+    margin:auto;
+}
+
+.info{
+
+    background:#f7f7f7;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    margin:25px 0;
+}
+
+.info h3{
+
+    color:#444;
+
+    margin-bottom:10px;
+}
+
+@media(max-width:500px){
+
+.container{
+
+width:90%;
+
+padding:30px;
+
+}
+
+.dashboard{
+
+width:95%;
+
+}
+
+}

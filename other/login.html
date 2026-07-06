@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+
+<div class="logo">🔐</div>
+
+<h2>Student Login</h2>
+
+<p class="subtitle">
+Login to continue
+</p>
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">
+Login
+</button>
+
+<p>
+
+Don't have an account?
+
+<a href="signup.html">Sign Up</a>
+
+</p>
+
+</div>
+</button>
+</body>
+</html>
+<script>
+    function login(){
+
+    let email=document.getElementById("email").value;
+
+    let password=document.getElementById("password").value;
+
+    let storedUser=
+
+    JSON.parse(localStorage.getItem("user"));
+
+    if(
+
+        email===storedUser.email &&
+
+        password===storedUser.password
+
+    ){
+
+        localStorage.setItem("isLoggedIn","true");
+
+        window.location.href="dashboard.html";
+
+    }
+
+    else{
+
+        alert("Invalid Email or Password");
+
+    }
+
+}
+</script>

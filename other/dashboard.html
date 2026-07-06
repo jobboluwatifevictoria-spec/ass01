@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dashboard">
+
+<h1>🎓 Student Dashboard</h1>
+
+<div class="info">
+
+<h3 id="welcome"></h3>
+
+<p>
+You have successfully logged into the Student Authentication System.
+</p>
+
+</div>
+
+<button class="logout" onclick="logout()">
+Logout
+</button>
+
+</div>
+</body>
+</html>
+<script>
+    if(localStorage.getItem("isLoggedIn")!=="true"){
+
+    window.location.href="login.html";
+
+}
+
+let user=
+
+JSON.parse(localStorage.getItem("user"));
+
+document.getElementById("welcome").innerHTML=
+
+"Welcome " + user.name;
+
+function logout(){
+
+    localStorage.removeItem("isLoggedIn");
+
+    window.location.href="login.html";
+
+}
+</script>
