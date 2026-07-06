@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Higher order functions</h1>
+    <h3 id="count">0</h3>
+  </body>
+</html>
+<script>
+  //A higher order function is a function that takes in another function
+  // a callback function is a function that is passed into another function, to be executed (or called) later
+
+  function greet(name, callback) {
+    //Higher order
+    console.log(`Hello, ${name}`);
+    callback();
+  }
+
+  function goodBye() {
+    //Call-back
+    console.log(`Later now`);
+  }
+
+  greet("Ade", goodBye);
+
+  function multiply(a, b, displayValue) {
+    let result = a * b;
+
+    displayValue(result);
+  }
+
+  function displayValue(result) {
+    console.log(result * 54);
+  }
+
+  multiply(5, 4, displayValue);
+
+  // Set Time out, a higher order function that runs after a set time.
+
+//   setTimeout(() => {
+//     console.log("Hello");
+//   }, 3000);
+
+  // Set Interval, a higher order function that runs after a set interval.
+
+//  let intervalId = setInterval(() => {
+//     console.log("Hi");
+//   }, 5000);
+
+ let countValue = 10;
+count.innerText = countValue;
+
+ let timeInterval = setInterval(() => {
+    // countValue++
+    // console.log(countValue);
+    
+    if (countValue == 0) {
+        clearInterval(timeInterval)
+        console.log("Game over");
+        
+    } else{
+         countValue--
+    console.log(countValue);
+    count.innerText = countValue
+    }
+}, 1000);
+
+// console.log(timeInterval);
+
+
+  () => {}; // callback structure
+</script>

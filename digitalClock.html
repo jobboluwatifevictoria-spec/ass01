@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#d90429,#6a0572,#1d3557);
+    background-size:300% 300%;
+    animation:bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove{
+    from{
+        background-position:left;
+    }
+    to{
+        background-position:right;
+    }
+}
+
+main{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#body{
+    width:650px;
+    padding:50px;
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+    text-align:center;
+    color:white;
+}
+
+#subject{
+    font-size:45px;
+    margin-bottom:50px;
+    letter-spacing:2px;
+    text-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+#innerPart{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+#hours,
+#mins,
+#secs{
+    width:120px;
+    height:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    font-weight:bold;
+    border-radius:20px;
+    background:rgba(255,255,255,.18);
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+#tag{
+    font-size:55px;
+    font-weight:bold;
+}
+
+@media(max-width:700px){
+
+    #body{
+        width:90%;
+        padding:30px;
+    }
+
+    #hours,
+    #mins,
+    #secs{
+        width:70px;
+        height:70px;
+        font-size:35px;
+    }
+
+    #tag{
+        font-size:35px;
+    }
+
+    #subject{
+        font-size:28px;
+    }
+}
+</style>
+  <body>
+    <main>
+      <div id="body">
+        <h2 id="subject">Good</h2>
+        <div id="innerPart">
+          <p id="hours"></p> 
+          <p id="tag">:</p>
+          <p id="mins"></p>
+          <p id="tag">:</p>
+          <p id="secs"></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script>
+  let countValue = 0;
+
+hours.innerText = "00";
+mins.innerText = "00";
+secs.innerText = "00";
+
+function updateGreeting(){
+
+    let hour = new Date().getHours();
+
+    if(hour >= 5 && hour < 12){
+        subject.innerText = " Good Morning ";
+    }
+
+    else if(hour >= 12 && hour < 17){
+        subject.innerText = " Good Afternoon ";
+    }
+
+    else if(hour >= 17 && hour < 21){
+        subject.innerText = " Good Evening ";
+    }
+
+    else{
+        subject.innerText = " Good Night ";
+    }
+
+}
+
+updateGreeting();
+
+        setInterval(() => {
+            if (secs.innerText == 59) {
+                mins.innerText = parseInt(mins.innerText) + 1;
+                secs.innerText = 1;
+            } else if(mins.innerText == 59){
+                hours.innerText = parseInt(hours.innerText) + 1;
+                mins.innerText = 1;
+            } else {
+                secs.innerText = parseInt(secs.innerText) + 1;
+            }
+        }, 1000);
+</script>

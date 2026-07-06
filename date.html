@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Date Object</h1>
+</body>
+</html>
+    <script>
+        const d = new Date()
+        console.log(d);
+
+        console.log(d.getFullYear());
+        console.log(d.getDay());
+        console.log(d.getDate());
+        console.log(d.getHours());
+        
+
+        console.log(new Date("2024-11-14"));
+        console.log(2025, 0, 25);
+        
+        const randomDay= new Date("2021-11-16")
+
+        console.log(randomDay);
+
+    const dateDiff = d - randomDay
+
+    console.log(Math.floor((dateDiff)/ (1000 * 60 *60 * 24)));
+    
+
+let days = null
+
+        function getDays(birthdate) {
+    const numberOfDays = d - new Date(birthdate)
+            
+    days = (Math.floor((numberOfDays)/ (1000 * 60 *60 * 24)));
+    
+        }
+        getDays("2009-6-15")
+        function getYears(){
+        console.log(days/365.25)
+        }
+    getYears()
+
+    console.log(d.toDateString());
+    console.log(d.toLocaleDateString());
+    console.log(d.toLocaleTimeString());
+    console.log(typeof d);
+    
+    // console.log(d.slice(0, ));
+    
+    function getDay(date){
+        console.log(new Date(date));
+        const dayArr = ["Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        console.log(new Date(date).getDay());
+        
+        console.log(dayArr[new Date(date).getDay()]);
+        
+    }
+    getDay("2004-11-3")
+    
+    </script>

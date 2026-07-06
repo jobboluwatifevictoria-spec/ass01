@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+  #color {
+      width: 190px;
+      height: 190px;
+      border: 1xp solid black;
+    }</style>
+  <body>
+    <main>
+      <div  id="color"></div>
+    </main>
+  </body>
+</html>
+<script>
+   setInterval(() => {
+    color.style.backgroundColor = `rgb(
+    ${Math.floor(Math.random() * 256)},
+     ${Math.floor(Math.random() * 256)},
+  ${Math.floor(Math.random() * 256)})`;
+  }, 3000);
+</script>

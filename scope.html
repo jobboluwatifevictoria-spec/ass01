@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="personName" type="text" placeholder="Name" />
+    <input id="personEmail" type="text" placeholder="email" />
+    <input id="personPassword" type="password" placeholder="password" />
+
+    <button onclick="getDetails()">get Details</button>
+    <button onclick="displayDetails()">display</button>
+    <button onclick="displayArray()">Show</button>
+    <script src="score.js"></script>
+  </body>
+</html>
+
+<script>
+  let thaName = "";
+  let theEmail = "";
+  let thePassword = "";
+
+  let personObject = null;
+
+  let allUsers = [];
+
+  function getDetails() {
+    // console.log(personName.value);
+    // console.log(personEmail.value);
+    // console.log(personPassword.value);
+
+    thaName = personName.value;
+    theEmail = personEmail.value;
+    thePassword = personPassword.value;
+
+    personObject = {
+      name: thaName,
+      email: theEmail,
+      password: thePassword,
+    };
+
+    allUsers.push(personObject);
+    console.log(personObject);
+
+    console.log(thaName, theEmail, thePassword);
+  }
+  function displayDetails() {
+    console.log(thaName, theEmail, thePassword);
+  }
+//   function displayArray() {
+//     if(!personObject){
+//         alert("there is no users yet");
+//         console.log("there is no users yet");
+//     } else{
+//     console.log(allUsers);
+//     }
+//   }
+
+//or
+   function displayArray() {
+    if(allUsers.length == 0){
+        alert("there is no users yet");
+        console.log("there is no users yet");
+    } else{
+    console.log(allUsers);
+    }
+
+  }
+
+  let studentObj = {
+    name: "aneeq",
+    email: "rice@gmail.com ",
+    password: "neequee",
+  };
+  console.log(studentObj["name"], studentObj["email"]);
+
+  let user = {
+    name: "aneeq",
+    email: "rice@gmail.com ",
+    password: "neequee",
+  };
+  console.log(user.name);
+
+  //we only loop when we are dealing with arrays
+
+  for (const value of Object.values(user)) {
+    console.log(value);
+  }
+  // for (const keys of Object.keys(user)) {
+  //     console.log(keys);
+  // }
+</script>
